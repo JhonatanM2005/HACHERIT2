@@ -454,6 +454,7 @@ section {
 }
 
 .form-reservas input,
+.form-reservas select,
 .form-reservas textarea {
   width: 100%;
   padding: 18px 20px;
@@ -467,6 +468,7 @@ section {
 }
 
 .form-reservas input::placeholder,
+.form-reservas select,
 .form-reservas textarea::placeholder {
   color: var(--color-negro);
   opacity: 1;
