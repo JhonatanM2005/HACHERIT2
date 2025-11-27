@@ -263,7 +263,7 @@ section {
 .nosotros-content {
   display: flex;
   flex-direction: column;
-  gap: 150px; /* Increased gap to account for overlapping images */
+  gap: 200px; /* Increased gap to account for overlapping images */
   margin-top: 5%;
   position: relative;
 }
