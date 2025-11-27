@@ -420,7 +420,6 @@ section {
 /* Detalle Producto */
 
 .detalle-hero {
-  background-image: url(IMG/baner\ honey\ rojo.png);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -429,6 +428,18 @@ section {
   background-position: center;
   position: relative;
   min-height: 100vh; /* Ensure enough height */
+}
+
+.detalle-hero.detalle-hero-rojo {
+  background-image: url(IMG/banner\ honey\ rojo.png);
+}
+
+.detalle-hero.detalle-hero-verde {
+  background-image: url(IMG/banner\ honey\ verde.png);
+}
+
+.detalle-hero.detalle-hero-negro {
+  background-image: url(IMG/banner\ honey\ negro.png);
 }
 
 /* Removed ::before overlay as per user feedback */
