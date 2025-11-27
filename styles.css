@@ -332,7 +332,7 @@ section {
 .nosotros-content {
   display: flex;
   flex-direction: column;
-  gap: 200px; /* Increased gap to account for overlapping images */
+  gap: 200px;
   margin-top: 5%;
   position: relative;
 }
@@ -341,44 +341,41 @@ section {
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 400px; /* Ensure enough height */
+  min-height: 400px;
 }
 
 .text-container {
   background-color: var(--color-beige);
   color: var(--color-negro);
-  padding: 5% 5% 8% 5%; /* Extra padding at bottom for visual balance */
+  padding: 5% 5% 8% 5%;
   border-radius: 40px;
   line-height: 1.8;
-  width: 100%; /* Text container takes up most of the width */
+  width: 100%;
   z-index: 1;
 }
 
-/* Specific positioning for the left overlap block (First block) */
-.block-overlap-left {
-  justify-content: flex-end; /* Push text to the right */
-}
+  justify-content: flex-end;
 
 .block-overlap-left .image-container {
   position: absolute;
   left: 0;
-  bottom: -50%;/* Overlap downwards */
-  width: 30%; /* Image width relative to container */
-  z-index: 2; /* Image on top */
+  bottom: -50%;
+  width: 30%;
+  z-index: 2;
 }
 
 /* Specific positioning for the right overlap block (Second block) */
 .block-overlap-right {
-  justify-content: flex-start; /* Push text to the left */
+  justify-content: flex-start;
   text-align: right;
 }
 
 .block-overlap-right .image-container {
   position: absolute;
   right: 0;
-  bottom: -50%; /* Overlap downwards */
-  width: 30%; /* Image width relative to container */
-  z-index: 2; /* Image on top */
+  bottom: -50%;
+  width: 30%;
+  z-index: 2;
 }
 
 .image-container img {
@@ -410,13 +407,13 @@ section {
 
   .block-overlap-left .image-container,
   .block-overlap-right .image-container {
-    position: static; /* Reset to static flow */
+    position: static;
     width: 100%;
-    margin-top: -20px; /* Slight negative margin for mobile overlap feel if desired, or just 0 */
+    margin-top: -20px;
   }
   
   .block-overlap-left {
-      flex-direction: column-reverse; /* Image below text on mobile for this block too if we want consistency, or keep standard */
+      flex-direction: column-reverse;
   }
 
 }
@@ -496,7 +493,7 @@ section {
   background-size: cover;
   background-position: center;
   position: relative;
-  min-height: 100vh; /* Ensure enough height */
+  min-height: 100vh;
 }
 
 .detalle-hero.detalle-hero-rojo {
@@ -511,7 +508,6 @@ section {
   background-image: url(IMG/banner\ honey\ negro.png);
 }
 
-/* Removed ::before overlay as per user feedback */
 
 .detalle-info {
   flex: 1;
@@ -530,7 +526,6 @@ section {
   font-weight: bold;
 }
 
-/* Apply opacity to 2nd and 3rd lines to simulate the gradient/fade effect */
 .detalle-info h1:nth-child(2) {
   opacity: 0.6;
 }
@@ -545,7 +540,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  align-items: center; /* Align items to center of the column */
+  align-items: center;
 }
 
 .spec-item {
@@ -556,7 +551,7 @@ section {
   padding: 0;
   border-radius: 0;
   gap: 10px;
-  width: auto; /* Let width be determined by content */
+  width: auto;
 }
 
 .spec-icon {
@@ -655,7 +650,6 @@ section {
   gap: 20px;
 }
 
-/* Reverse the order for the second item (Text top, Image bottom) */
 .proceso-item:nth-child(2) {
   flex-direction: column-reverse;
 }
@@ -663,10 +657,6 @@ section {
 .proceso-item img {
   width: 100%;
   height: auto;
-  /* User stated images already have styles/borders, so removing CSS border-radius if it exists, 
-     or just ensuring no extra styles are added. 
-     The previous code had border-radius: 15px. I will remove it to be safe based on "no hay que agregarle estilos".
-  */
   margin-bottom: 0;
 }
 
@@ -689,7 +679,7 @@ section {
 
 .experiencia-card {
   display: flex;
-  align-items: flex-end; /* Align bottom to match image end */
+  align-items: flex-end;
   justify-content: center;
   margin-bottom: 10%;
   position: relative;
@@ -707,7 +697,7 @@ section {
 
 .experiencia-imagen img {
   width: 80%;
-  height: 100%; /* Fixed height for consistent arch */
+  height: 100%;
   object-fit: cover;
   border-radius: 250px 250px 0 0;
 }
@@ -717,13 +707,13 @@ section {
   display: flex;
   flex-direction: column;
   z-index: 2;
-  margin-bottom: 0; /* Align with bottom */
+  margin-bottom: 0;
 }
 
 /* Standard Card (Image Left, Info Right) */
 .experiencia-card:not(.reverse) .experiencia-info {
-  margin-left: -15%; /* Overlap image */
-  align-items: flex-end; /* Align title to right */
+  margin-left: -15%;
+  align-items: flex-end;
 }
 
 .experiencia-card:not(.reverse) .experiencia-info h3 {
@@ -732,8 +722,8 @@ section {
 
 /* Reverse Card (Image Right, Info Left) */
 .experiencia-card.reverse .experiencia-info {
-  margin-right: -15%; /* Overlap image */
-  align-items: flex-start; /* Align title to left */
+  margin-right: -15%;
+  align-items: flex-start;
 }
 
 .experiencia-card.reverse .experiencia-info h3 {
@@ -782,7 +772,7 @@ section {
   .experiencia-info {
     flex: 0 0 100%;
     width: 90%;
-    margin-top: -10%; /* Overlap upwards on mobile */
+    margin-top: -10%;
     margin-left: 0 !important;
     margin-right: 0 !important;
     align-items: center !important;
