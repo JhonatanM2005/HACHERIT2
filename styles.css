@@ -46,7 +46,7 @@ nav {
 nav a {
   color: var(--color-blanco);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -118,7 +118,7 @@ nav a.active::after {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: bold;
   margin-bottom: 3%;
   text-transform: uppercase;
@@ -145,15 +145,15 @@ nav a.active::after {
 
 .cta-button {
   display: inline-block;
-  padding: 1.5% 4%;
+  padding: 12px 30px;
   background-color: var(--color-rojo);
   color: var(--color-blanco);
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
-  text-transform: uppercase;
   transition: background-color 0.3s;
   margin-top: 3%;
+  font-size: 16px;
 }
 
 .cta-button:hover {
@@ -166,13 +166,64 @@ nav a.active::after {
   width: fit-content;
 }
 
+/* Detail Page Button */
+.detail-cta-button {
+  display: inline-block;
+  padding: 15px 60px;
+  background-color: #a62f2f;
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: none;
+  transition: background-color 0.3s;
+  margin-top: 3%;
+  font-size: 19px;
+  box-shadow: 0 4px 15px rgba(166, 47, 47, 0.4);
+}
+
+.detail-cta-button:hover {
+  background-color: #8b2626;
+}
+
+/* Product Card Buttons */
+.product-card-button {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-top: 3%;
+  font-size: 14px;
+}
+
+.product-card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.producto-card.rojo .product-card-button {
+  color: var(--color-rojo);
+}
+
+.producto-card.negro .product-card-button {
+  color: var(--color-negro);
+}
+
+.producto-card.verde .product-card-button {
+  color: var(--color-verde);
+}
+
 /* Sections */
 section {
   padding: 6% 8%;
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 40px;
   text-align: center;
   margin-bottom: 5%;
   text-transform: uppercase;
@@ -347,7 +398,7 @@ section {
 }
 
 .producto-info h3 {
-  font-size: 2.5rem;
+  font-size: 40px;
   margin-bottom: 3%;
   text-transform: uppercase;
 }
@@ -370,45 +421,53 @@ section {
 
 /* Detalle Producto */
 .detalle-hero {
+  background-image: url(IMG/baner\ honey\ rojo.png);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10% 8%;
+  padding: 15% 8%;
   background-size: cover;
   background-position: center;
   position: relative;
+  min-height: 100vh; /* Ensure enough height */
 }
 
-.detalle-hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
+/* Removed ::before overlay as per user feedback */
 
 .detalle-info {
   flex: 1;
   z-index: 2;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .detalle-info h1 {
-  font-size: 3.5rem;
-  margin-bottom: 2%;
+  font-size: 80px;
+  line-height: 1;
+  margin-bottom: 0;
+  color: var(--color-beige);
   text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Apply opacity to 2nd and 3rd lines to simulate the gradient/fade effect */
+.detalle-info h1:nth-child(2) {
+  opacity: 0.6;
+}
+
+.detalle-info h1:nth-child(3) {
+  opacity: 0.3;
 }
 
 .detalle-specs {
-  flex: 1;
   z-index: 2;
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4%;
+  gap: 30px;
+  align-items: center; /* Align items to center of the column */
 }
 
 .spec-item {
@@ -416,14 +475,46 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 3%;
-  border-radius: 15px;
+  padding: 0;
+  border-radius: 0;
+  gap: 10px;
+  width: auto; /* Let width be determined by content */
 }
 
 .spec-icon {
-  font-size: 2rem;
-  margin-bottom: 2%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.spec-icon img {
+  width: 80%;
+  height: auto;
+  /* Removed filter: brightness(0) as per user feedback */
+}
+
+.spec-text {
+  text-align: center;
+  color: var(--color-beige);
+  width: auto;
+  display: block;
+}
+
+.spec-item {
+  margin-right: 0;
+}
+
+.spec-text strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.spec-text p {
+  font-size: 16px;
+  line-height: 1.2;
 }
 
 .descripcion-section {
@@ -448,16 +539,21 @@ section {
 }
 
 .descripcion-content h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   margin-bottom: 4%;
 }
 
 .descripcion-content h4 {
   margin-top: 4%;
   margin-bottom: 2%;
-  font-size: 1.3rem;
+  font-size: 21px;
   text-transform: uppercase;
   color: var(--color-beige);
+}
+
+.cta-container {
+  background-color: var(--color-negro);
+  text-align: center;
 }
 
 .proceso-section {
@@ -467,20 +563,40 @@ section {
 
 .proceso-grid {
   display: flex;
-  justify-content: space-around;
-  gap: 5%;
+  justify-content: space-between;
+  gap: 3%;
   margin-top: 5%;
 }
 
 .proceso-item {
   flex: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Reverse the order for the second item (Text top, Image bottom) */
+.proceso-item:nth-child(2) {
+  flex-direction: column-reverse;
 }
 
 .proceso-item img {
   width: 100%;
-  border-radius: 15px;
-  margin-bottom: 4%;
+  height: auto;
+  /* User stated images already have styles/borders, so removing CSS border-radius if it exists, 
+     or just ensuring no extra styles are added. 
+     The previous code had border-radius: 15px. I will remove it to be safe based on "no hay que agregarle estilos".
+  */
+  margin-bottom: 0;
+}
+
+.proceso-item p {
+  color: var(--color-beige);
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 0 5%;
 }
 
 /* Experiencias */
@@ -548,8 +664,8 @@ section {
 
 .experiencia-info h3 {
   color: var(--color-beige);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 40px;
+  margin-bottom: 16px;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
@@ -560,7 +676,7 @@ section {
   color: var(--color-negro);
   padding: 8%;
   border-radius: 40px;
-  font-size: 0.95rem;
+  font-size: 15px;
   line-height: 1.8;
   text-align: left;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -597,7 +713,7 @@ section {
   .experiencia-info h3 {
     text-align: center !important;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 32px;
   }
 }
 
@@ -610,7 +726,7 @@ section {
 }
 
 .reservas-section h2 {
-  font-size: 2.5rem;
+  font-size: 40px;
   margin-bottom: 3%;
 }
 
@@ -646,7 +762,7 @@ section {
   border: none;
   border-radius: 25px;
   font-family: "Poppins", sans-serif;
-  font-size: 0.95rem;
+  font-size: 15px;
   color: var(--color-negro);
   outline: none;
 }
@@ -672,7 +788,7 @@ section {
   padding: 15px 60px;
   border-radius: 25px;
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -697,7 +813,7 @@ section {
 
 .contacto-section h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 40px;
   margin-bottom: 3%;
 }
 
@@ -799,7 +915,7 @@ section {
 
 .estrellas {
   color: gold;
-  font-size: 1.2rem;
+  font-size: 19px;
 }
 
 /* Footer */
@@ -872,7 +988,7 @@ footer {
   color: var(--color-negro);
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   white-space: nowrap;
 }
 
@@ -885,7 +1001,7 @@ footer {
   margin-top: 2%;
   padding-top: 2%;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
 /* Responsive */
@@ -896,7 +1012,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .content-block,
@@ -944,5 +1060,25 @@ footer {
 
   .form-row {
     flex-direction: column;
+  }
+
+  /* Responsive for Detalle Hero */
+  .detalle-info h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .detalle-specs {
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .spec-item {
+    margin-bottom: 20px;
   }
 }
