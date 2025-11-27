@@ -354,8 +354,6 @@ section {
   z-index: 1;
 }
 
-  justify-content: flex-end;
-
 .block-overlap-left .image-container {
   position: absolute;
   left: 0;
