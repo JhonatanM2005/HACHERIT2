@@ -83,6 +83,10 @@ nav a.active::after {
 }
 
 /* Hero Section */
+.index-hero {
+  background-image: url(IMG/banner\ pg\ 1.png);
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -176,9 +180,13 @@ section {
 }
 
 /* Nosotros Page */
+.nosotros-hero {
+  background-image: url('IMG/banner\ sobre\ nosotros.png');
+}
+
 .nosotros-section {
   background-color: var(--color-negro);
-  padding: 8% 10%;
+  padding: 8% 10% 20% 10%;
 }
 
 .nosotros-intro {
@@ -189,46 +197,110 @@ section {
   color: var(--color-blanco);
 }
 
-.nosotros-content {
+.nosotros-imagenes-centrales {
   display: flex;
-  flex-direction: column;
-  gap: 8%;
-  margin-top: 5%;
-}
-
-.content-block {
-  display: flex;
-  align-items: center;
-  gap: 5%;
-}
-
-.content-block.reverse {
-  flex-direction: row-reverse;
-}
-
-.image-container {
-  flex: 1;
-  display: flex;
+  justify-content: center;
   gap: 3%;
+  margin: 5% auto;
+  max-width: 60%;
 }
 
-.image-container img {
+.nosotros-imagenes-centrales img {
   width: 48%;
-  border-radius: 15px;
+  border-radius: 30px;
   object-fit: cover;
 }
 
-.image-container.single img {
-  width: 100%;
+.nosotros-content {
+  display: flex;
+  flex-direction: column;
+  gap: 150px; /* Increased gap to account for overlapping images */
+  margin-top: 5%;
+  position: relative;
+}
+
+.content-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 400px; /* Ensure enough height */
 }
 
 .text-container {
-  flex: 1;
   background-color: var(--color-beige);
   color: var(--color-negro);
-  padding: 5%;
-  border-radius: 20px;
+  padding: 5% 5% 8% 5%; /* Extra padding at bottom for visual balance */
+  border-radius: 40px;
   line-height: 1.8;
+  width: 100%; /* Text container takes up most of the width */
+  z-index: 1;
+}
+
+/* Specific positioning for the left overlap block (First block) */
+.block-overlap-left {
+  justify-content: flex-end; /* Push text to the right */
+}
+
+.block-overlap-left .image-container {
+  position: absolute;
+  left: 0;
+  bottom: -50%;/* Overlap downwards */
+  width: 30%; /* Image width relative to container */
+  z-index: 2; /* Image on top */
+}
+
+/* Specific positioning for the right overlap block (Second block) */
+.block-overlap-right {
+  justify-content: flex-start; /* Push text to the left */
+  text-align: right;
+}
+
+.block-overlap-right .image-container {
+  position: absolute;
+  right: 0;
+  bottom: -50%; /* Overlap downwards */
+  width: 30%; /* Image width relative to container */
+  z-index: 2; /* Image on top */
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Responsive styles for overlapping layout */
+@media (max-width: 992px) {
+  .nosotros-content {
+    gap: 50px;
+  }
+
+  .content-block {
+    flex-direction: column;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .block-overlap-left,
+  .block-overlap-right {
+    justify-content: center;
+  }
+
+  .text-container {
+    width: 100%;
+    padding: 8%;
+  }
+
+  .block-overlap-left .image-container,
+  .block-overlap-right .image-container {
+    position: static; /* Reset to static flow */
+    width: 100%;
+    margin-top: -20px; /* Slight negative margin for mobile overlap feel if desired, or just 0 */
+  }
+  
+  .block-overlap-left {
+      flex-direction: column-reverse; /* Image below text on mobile for this block too if we want consistency, or keep standard */
+  }
+
 }
 
 /* Productos */
@@ -292,7 +364,7 @@ section {
 }
 
 .producto-imagen img {
-  max-width: 70%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -412,6 +484,10 @@ section {
 }
 
 /* Experiencias */
+
+.experiencias-hero {
+  background-image: url('IMG/banner\ experiencias_.png');
+}
 .experiencias-section {
   background-color: var(--color-negro);
   padding: 8% 5%;
@@ -597,10 +673,6 @@ section {
   gap: 3%;
 }
 
-.reconocimiento-imagenes img {
-  width: 48%;
-  border-radius: 15px;
-}
 
 .reconocimiento-texto {
   flex: 1;
