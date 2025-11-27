@@ -536,6 +536,10 @@ section {
 }
 
 /* Contacto */
+.contacto-hero {
+  background-image: url(IMG/banner\ contactanos.png);
+}
+
 .contacto-section {
   background-color: var(--color-negro);
   padding: 8% 10%;
