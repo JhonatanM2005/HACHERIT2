@@ -51,10 +51,35 @@ nav a {
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-beige);
+  transition: width 0.3s ease-in-out;
 }
 
 nav a:hover {
   color: var(--color-beige);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: var(--color-beige);
+}
+
+nav a.active::after {
+  width: 100%;
 }
 
 /* Hero Section */
@@ -209,7 +234,7 @@ section {
 /* Productos */
 .productos-section {
   background-color: var(--color-negro);
-  padding: 10% 0%;
+  padding: 8% 0 0 0;
   margin: 0;
 }
 
@@ -226,14 +251,23 @@ section {
 
 .producto-card.rojo {
   background-image: url(IMG/BG\ ROJO.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .producto-card.negro {
   background-image: url(IMG/BG\ NEGRO.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .producto-card.verde {
   background-image: url(IMG/BG\ VERDE.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .producto-info {
