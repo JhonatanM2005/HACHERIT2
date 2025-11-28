@@ -133,20 +133,20 @@ nav a.active::after {
     font-size: 20px;
   }
 
-  #menu-toggle:checked ~ nav {
+  #menu-toggle:checked~nav {
     right: 0;
   }
 
   /* Hamburger Animation */
-  #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+  #menu-toggle:checked~.menu-icon span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
 
-  #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+  #menu-toggle:checked~.menu-icon span:nth-child(2) {
     opacity: 0;
   }
 
-  #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+  #menu-toggle:checked~.menu-icon span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
 }
@@ -269,7 +269,7 @@ nav a.active::after {
 
 .product-card-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .producto-card.rojo .product-card-button {
@@ -409,9 +409,9 @@ section {
     width: 100%;
     margin-top: -20px;
   }
-  
+
   .block-overlap-left {
-      flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 
 }
@@ -668,8 +668,9 @@ section {
 /* Experiencias */
 
 .experiencias-hero {
-  background-image: url('IMG/banner\ experiencias_.png');
+  background-image: url('IMG/EXPERIENCIAS-BANNER.png');
 }
+
 .experiencias-section {
   background-color: var(--color-negro);
   padding: 8% 5% 3%;
@@ -745,11 +746,12 @@ section {
   font-size: 15px;
   line-height: 1.8;
   text-align: left;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 /* Responsive */
 @media (max-width: 992px) {
+
   .experiencia-card,
   .experiencia-card.reverse {
     flex-direction: column;
