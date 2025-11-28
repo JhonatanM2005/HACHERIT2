@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honey Negro - Hacherit</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,12 +30,12 @@
     </header>
 
     <section class="detalle-hero detalle-hero-negro">
-        <div class="detalle-info">
+        <div class="detalle-info" data-aos="fade-right" data-aos-duration="1000">
             <h1>Honey Negro</h1>
             <h1>Honey Negro</h1>
             <h1>Honey Negro</h1>
         </div>
-        <div class="detalle-specs">
+        <div class="detalle-specs" data-aos="fade-left" data-aos-delay="200">
             <div class="spec-item">
                 <div class="spec-icon"><img src="IMG/ALTURA.png" alt=""></div>
                 <div class="spec-text">
@@ -60,10 +61,10 @@
     </section>
 
     <section class="descripcion-section">
-        <div class="producto-imagen-grande">
+        <div class="producto-imagen-grande" data-aos="zoom-in" data-aos-duration="1000">
             <img src="IMG/honey negro.png" alt="Honey Negro">
         </div>
-        <div class="descripcion-content">
+        <div class="descripcion-content" data-aos="fade-left" data-aos-delay="200">
             <h2>DESCRIPCIÓN</h2>
             <p>nspirado en la fuerza de lo simple, el Honey Negro representa el equilibrio entre lo clásico y lo
                 natural. Cultivado a la sombra y tostado con paciencia, revela una energía cálida que acompaña los días
@@ -85,20 +86,20 @@
     </div>
 
     <section class="proceso-section">
-        <h2 class="section-title">Proceso</h2>
+        <h2 class="section-title" data-aos="fade-down">Proceso</h2>
         <div class="proceso-grid">
-            <div class="proceso-item">
+            <div class="proceso-item" data-aos="fade-up" data-aos-delay="100">
                 <img src="IMG/proceso cafe 1.png" alt="Recolección">
                 <p>Solo se eligen los granos maduros, de color rojo intenso. Este punto es clave, pues la dulzura
                     natural del café depende de la madurez exacta del fruto.</p>
             </div>
-            <div class="proceso-item">
+            <div class="proceso-item" data-aos="fade-up" data-aos-delay="300">
                 <img src="IMG/proceso cafe 2.png" alt="Proceso Lavado">
                 <p>Se retira la cáscara, pero, a diferencia del Honey Rojo, se conserva casi el 100% del mucílago para
                     que fermente y oscurezca de manera natural.
                 </p>
             </div>
-            <div class="proceso-item">
+            <div class="proceso-item" data-aos="fade-up" data-aos-delay="500">
                 <img src="IMG/proceso cafe 3.png" alt="Reposo">
                 <p>Se seca manteniendo toda la miel, permitiendo un desarrollo profundo del dulzor, cuerpo denso y notas
                     intensas.</p>
@@ -129,6 +130,9 @@
             <p>© 2025 Copyright Hacherit. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suave Lavado - Hacherit</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,12 +30,12 @@
     </header>
 
     <section class="detalle-hero detalle-hero-verde">
-        <div class="detalle-info">
+        <div class="detalle-info" data-aos="fade-right" data-aos-duration="1000">
             <h1>Suave Lavado</h1>
             <h1>Suave Lavado</h1>
             <h1>Suave Lavado</h1>
         </div>
-        <div class="detalle-specs">
+        <div class="detalle-specs" data-aos="fade-left" data-aos-delay="200">
             <div class="spec-item">
                 <div class="spec-icon"><img src="IMG/ALTURA.png" alt=""></div>
                 <div class="spec-text">
@@ -60,10 +61,10 @@
     </section>
 
     <section class="descripcion-section">
-        <div class="producto-imagen-grande">
+        <div class="producto-imagen-grande" data-aos="zoom-in" data-aos-duration="1000">
             <img src="IMG/honey verde.png" alt="Honey Verde">
         </div>
-        <div class="descripcion-content">
+        <div class="descripcion-content" data-aos="fade-left" data-aos-delay="200">
             <h2>DESCRIPCIÓN</h2>
             <p>Ligero pero lleno de intención, el Suave Lavado es la expresión más limpia del café de montaña. Cada
                 grano pasa por un proceso cuidadoso que resalta su pureza y suavidad, ideal para quienes disfrutan los
@@ -85,19 +86,19 @@
     </div>
 
     <section class="proceso-section">
-        <h2 class="section-title">Proceso</h2>
+        <h2 class="section-title" data-aos="fade-down">Proceso</h2>
         <div class="proceso-grid">
-            <div class="proceso-item">
+            <div class="proceso-item" data-aos="fade-up" data-aos-delay="100">
                 <img src="IMG/proceso cafe 1.png" alt="Recolección">
                 <p>Los recolectores eligen frutos sanos y uniformes para mantener un perfil de sabor constante.</p>
             </div>
-            <div class="proceso-item">
+            <div class="proceso-item" data-aos="fade-up" data-aos-delay="300">
                 <img src="IMG/proceso cafe 2.png" alt="Proceso Lavado">
                 <p>Se despulpa de forma tradicional y luego se hace un lavado suave, retirando solo parte del mucílago
                     sin dejar el grano completamente limpio.
                 </p>
             </div>
-            <div class="proceso-item">
+            <div class="proceso-item" data-aos="fade-up" data-aos-delay="500">
                 <img src="IMG/proceso cafe 3.png" alt="Reposo">
                 <p>El grano se seca con una capa ligera de miel residual, logrando un perfil más limpio que los honey,
                     pero con buena dulzura y equilibrio.</p>
@@ -128,6 +129,9 @@
             <p>© 2025 Copyright Hacherit. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

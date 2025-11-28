@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
     </header>
 
     <section class="hero index-hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <h1>CAFÉ DE ORIGEN</h1>
             <div> <img src="IMG/linea.svg" alt=""></div>
             <a href="productos.html" class="cta-button">Conoce nuestros cafés</a>
@@ -44,13 +45,13 @@
     </section>
 
     <section class="reconocimientos-section">
-        <h2 class="section-title">RECONOCIMIENTOS</h2>
+        <h2 class="section-title" data-aos="fade-down">RECONOCIMIENTOS</h2>
         <div class="reconocimiento-content">
-            <div class="reconocimiento-imagenes">
+            <div class="reconocimiento-imagenes" data-aos="fade-right" data-aos-duration="1000">
                 <img src="IMG/reconocimiento.png">
             </div>
-            <div class="reconocimiento-texto">
-                <p>En 2024, Hacherit fue reconocido en el evento “Medellín Sabe a Café”, obteniendo el tercer lugar en
+            <div class="reconocimiento-texto" data-aos="fade-left" data-aos-duration="1000">
+                <p>En 2024, Hacherit fue reconocido en el evento "Medellín Sabe a Café", obteniendo el tercer lugar en
                     la categoría Mejor Taza.</p>
                 <p>Este reconocimiento refleja la calidad, el esfuerzo y la pasión que ponemos en cada etapa, desde el
                     cultivo hasta el aroma final en tu taza.</p>
@@ -61,9 +62,9 @@
     </section>
 
     <section class="testimonios-section">
-        <h2 class="section-title">TESTIMONIOS</h2>
+        <h2 class="section-title" data-aos="fade-down">TESTIMONIOS</h2>
         <div class="testimonios-grid">
-            <div class="testimonio-card">
+            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="testimonio-texto">
                     <p>"Un café artesanal colombiano con aroma delicioso y sabor limpio. Cada taza de Hacherit se siente
                         hecha con dedicación."</p>
@@ -76,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonio-card">
+            <div class="testimonio-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="testimonio-texto">
                     <p>"Probé Hacherit en Medellín Sabe a Café y entendí por qué obtuvo el tercer lugar. Es un café
                         equilibrado y lleno de carácter."</p>
@@ -115,6 +116,9 @@
             <p>© 2025 Copyright Hacherit. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

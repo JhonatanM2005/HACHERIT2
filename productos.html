@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - Hacherit</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,41 +30,41 @@
     </header>
 
     <section class="productos-section">
-        <h2 class="section-title">NUESTROS PRODUCTOS</h2>
+        <h2 class="section-title" data-aos="fade-down">NUESTROS PRODUCTOS</h2>
 
-        <div class="producto-card rojo">
+        <div class="producto-card rojo" data-aos="fade-right" data-aos-duration="1000">
             <div class="producto-info">
                 <h3>Honey Rojo</h3>
                 <p>Un café de matices intensos, donde el dulzor del vino y el aroma del cacao se entrelazan en cada
                     sorbo. Su perfil revela la fuerza del grano y la paciencia del proceso.</p>
                 <a href="honey-rojo-detalle.html" class="product-card-button">Conoce más</a>
             </div>
-            <div class="producto-imagen">
+            <div class="producto-imagen" data-aos="zoom-in" data-aos-delay="200">
                 <img src="IMG/honey rojo.png" alt="Honey Rojo">
             </div>
         </div>
 
-        <div class="producto-card negro">
+        <div class="producto-card negro" data-aos="fade-left" data-aos-duration="1000">
             <div class="producto-info">
                 <h3>Honey Negro</h3>
                 <p>Oscuro y profundo, conserva una dulzura sutil que envuelve los sentidos. Cada taza evoca el
                     equilibrio entre la sombra y la calidez, entre la tierra y la miel.</p>
                 <a href="honey-negro-detalle.html" class="product-card-button">Conoce más</a>
             </div>
-            <div class="producto-imagen">
+            <div class="producto-imagen" data-aos="zoom-in" data-aos-delay="200">
                 <img src="IMG/honey negro.png" alt="Honey Negro">
             </div>
         </div>
 
-        <div class="producto-card verde">
+        <div class="producto-card verde" data-aos="fade-right" data-aos-duration="1000">
             <div class="producto-info">
                 <h3>Suave Lavado</h3>
                 <p>Limpio, claro y sereno. Un café que habla de las montañas y de las manos que lo cultivan. En su
                     suavidad se encuentra la pureza de lo esencial.</p>
                 <a href="honey-verde-detalle.html" class="product-card-button">Conoce más</a>
             </div>
-            <div class="producto-imagen">
-                <img src="IMG/honey verde.png" alt="Honey Verde">
+            <div class="producto-imagen" data-aos="zoom-in" data-aos-delay="200">
+                <img src="IMG/suave lavado.png" alt="Suave Lavado">
             </div>
         </div>
     </section>
@@ -91,6 +92,9 @@
             <p>© 2025 Copyright Hacherit. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

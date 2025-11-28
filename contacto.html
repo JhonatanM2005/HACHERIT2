@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Hacherit</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,23 +30,23 @@
     </header>
 
     <section class="hero centered contacto-hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <h1>CONTÁCTANOS</h1>
-            <div class="decorative-wave"></div>
+            <div> <img src="IMG/linea.svg" alt=""></div>
         </div>
     </section>
 
     <section class="contacto-section">
         <div class="contacto-content">
-            <h2>Escríbenos</h2>
-            <p class="contacto-intro">
+            <h2 data-aos="fade-down">Escríbenos</h2>
+            <p class="contacto-intro" data-aos="fade-up">
                 Nos encanta escuchar a quienes disfrutan el café tanto como nosotros.Si tienes dudas, comentarios o
                 simplemente quieres contarnos tu experiencia con Hacherit, escríbenos.</p>
-            <p class="contacto-intro">
+            <p class="contacto-intro" data-aos="fade-up" data-aos-delay="100">
                 Tu opinión nos ayuda a seguir creciendo y mejorando cada día.
             </p>
 
-            <form class="form-reservas">
+            <form class="form-reservas" data-aos="fade-up" data-aos-delay="200">
                 <div class="form-row">
                     <div class="form-group">
                         <input type="text" placeholder="Nombre:" required>
@@ -63,7 +64,7 @@
                 <button type="submit" class="submit-button">ENVIAR</button>
             </form>
 
-            <div class="mapa-container">
+            <div class="mapa-container" data-aos="zoom-in" data-aos-delay="300">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.175110902888!2d-75.52945899189426!3d6.240637884406592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4427d7d3866cc3%3A0x4b5a7a5d63c3d3f3!2sHogar%20Casa%20CLARET!5e0!3m2!1ses!2sco!4v1764202822702!5m2!1ses!2sco"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -94,6 +95,9 @@
             <p>© 2025 Copyright Hacherit. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

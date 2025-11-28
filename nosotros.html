@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - Hacherit</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,14 +30,14 @@
     </header>
 
     <section class="hero centered nosotros-hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <h1>SOBRE NOSOTROS</h1>
-            <div class="decorative-wave"></div>
+            <div> <img src="IMG/linea.svg" alt=""></div>
         </div>
     </section>
 
     <section class="nosotros-section">
-        <div class="nosotros-intro">
+        <div class="nosotros-intro" data-aos="fade-up" data-aos-duration="1000">
             <p>Somos Hernán y Norbey Guzmán Bran, dos hermanos nacidos en Santa Fe de Antioquia, una tierra donde el
                 café no solo se cultiva, sino que se respira desde la infancia. Crecimos viendo a nuestros padres
                 trabajar la tierra con paciencia y respeto, aprendiendo que cada semilla necesita tiempo, cuidado y amor
@@ -49,12 +50,12 @@
         </div>
 
         <div class="nosotros-imagenes-centrales">
-            <img src="IMG/don hernan_.png" alt="Don Hernán">
-            <img src="IMG/don norbey.png" alt="Don Norbey">
+            <img src="IMG/don hernan_.png" alt="Don Hernán" data-aos="fade-right" data-aos-delay="100">
+            <img src="IMG/don norbey.png" alt="Don Norbey" data-aos="fade-left" data-aos-delay="100">
         </div>
 
         <div class="nosotros-content">
-            <div class="content-block block-overlap-left">
+            <div class="content-block block-overlap-left" data-aos="fade-right" data-aos-duration="1000">
                 <div class="image-container single">
                     <img src="IMG/sobre nosotros 1.png" alt="Trabajando en la finca">
                 </div>
@@ -68,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="content-block block-overlap-right">
+            <div class="content-block block-overlap-right" data-aos="fade-left" data-aos-duration="1000">
                 <div class="text-container">
                     <p>Hoy nuestra finca, ubicada en Santa Elena, Medellín, es el corazón de todo lo que hacemos. Aquí
                         cultivamos, fermentamos y tostamos nuestro café con la dedicación que aprendimos desde pequeños.
@@ -106,6 +107,9 @@
             <p>© 2025 Copyright Hacherit. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>

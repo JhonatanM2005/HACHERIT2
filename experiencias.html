@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiencias - Hacherit</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -29,14 +30,14 @@
     </header>
 
     <section class="hero centered experiencias-hero">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <h1>EXPERIENCIAS</h1>
             <div> <img src="IMG/linea.svg" alt=""></div>
         </div>
     </section>
 
     <section class="experiencias-section">
-        <div class="experiencia-card">
+        <div class="experiencia-card" data-aos="fade-up" data-aos-duration="1000">
             <div class="experiencia-imagen">
                 <img src="IMG/recorridos finca.png" alt="Recorrido Finca">
             </div>
@@ -51,7 +52,7 @@
             </div>
         </div>
 
-        <div class="experiencia-card reverse">
+        <div class="experiencia-card reverse" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div class="experiencia-imagen">
                 <img src="IMG/cata de cafe.png" alt="Catas de Café">
             </div>
@@ -66,7 +67,7 @@
             </div>
         </div>
 
-        <div class="experiencia-card">
+        <div class="experiencia-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
             <div class="experiencia-imagen">
                 <img src="IMG/mercados campesinos.png" alt="Mercados Campesinos">
             </div>
@@ -83,12 +84,12 @@
     </section>
 
     <section class="reservas-section">
-        <h2>Reservas</h2>
-        <div class="reservas-intro">
+        <h2 data-aos="fade-down">Reservas</h2>
+        <div class="reservas-intro" data-aos="fade-up">
             <p>Te invitamos a conocer el café desde su origen, en nuestra finca ubicada en Santa Elena, Medellín. Aquí podrás recorrer los cafetales, aprender sobre nuestros procesos artesanales y disfrutar una cata guiada de nuestros cafés especiales.</p>
             <p>También podrás agendar tu visita para vivir la experiencia completa: caminar entre los cultivos, conocer nuestras fermentaciones y degustar el resultado final en una taza.</p>
         </div>
-        <form class="form-reservas">
+        <form class="form-reservas" data-aos="fade-up" data-aos-delay="200">
             <div class="form-row">
                 <div class="form-group">
                     <input type="text" placeholder="Nombre y apellidos" required>
@@ -145,6 +146,9 @@
             <p>© 2025 Copyright Hacherit. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>
