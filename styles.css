@@ -1044,7 +1044,30 @@ footer {
 }
 
 .footer-links {
-  }
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-links a {
+  color: var(--color-negro);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.footer-links a:hover {
+  color: var(--color-rojo);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2%;
+  padding-top: 2%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
 
   /* Productos */
   .producto-card {
@@ -1126,7 +1149,7 @@ footer {
   .footer-logo img {
     height: 55px;
   }
-}
+
 
 /* Laptop Pequeño / Tablet Horizontal (1024px - 1366px) */
 @media (max-width: 1024px) {
