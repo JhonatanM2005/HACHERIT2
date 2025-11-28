@@ -1044,64 +1044,479 @@ footer {
 }
 
 .footer-links {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+  }
+
+  /* Productos */
+  .producto-card {
+    height: 520px;
+    padding: 4%;
+  }
+
+  .producto-info h3 {
+    font-size: 36px;
+  }
+
+  .producto-info p {
+    font-size: 15px;
+  }
+
+  /* Detalle Producto */
+  .detalle-hero {
+    padding: 12% 6%;
+  }
+
+  .detalle-info h1 {
+    font-size: 68px;
+  }
+
+  .spec-icon img {
+    width: 70%;
+  }
+
+  .spec-text strong {
+    font-size: 16px;
+  }
+
+  .spec-text p {
+    font-size: 14px;
+  }
+
+  /* Descripción */
+  .descripcion-section {
+    padding: 6%;
+  }
+
+  .descripcion-content h2 {
+    font-size: 36px;
+  }
+
+  .descripcion-content h4 {
+    font-size: 19px;
+  }
+
+  /* Nosotros */
+  .nosotros-section {
+    padding: 6% 8% 15% 8%;
+  }
+
+  .nosotros-content {
+    gap: 150px;
+  }
+
+  /* Experiencias */
+  .experiencia-info h3 {
+    font-size: 36px;
+  }
+
+  /* Reconocimientos */
+  .reconocimiento-content {
+    max-width: 85%;
+  }
+
+  /* Testimonios */
+  .testimonios-grid {
+    gap: 4%;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2.5% 4%;
+  }
+
+  .footer-logo img {
+    height: 55px;
+  }
 }
 
-.footer-links a {
-  color: var(--color-negro);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  white-space: nowrap;
-}
+/* Laptop Pequeño / Tablet Horizontal (1024px - 1366px) */
+@media (max-width: 1024px) {
+  /* Header */
+  header {
+    padding: 2% 3%;
+  }
 
-.footer-links a:hover {
-  color: var(--color-rojo);
-}
+  .logo img {
+    height: 40px;
+  }
 
-.copyright {
-  text-align: center;
-  margin-top: 2%;
-  padding-top: 2%;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 14px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
   nav {
+    gap: 3%;
+    margin-right: 40px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  /* Productos */
+  .producto-card {
+    height: 480px;
+    padding: 3%;
+  }
+
+  .producto-info h3 {
+    font-size: 32px;
+  }
+
+  .producto-imagen img {
+    max-width: 350px;
+  }
+
+  /* Detalle */
+  .detalle-info h1 {
+    font-size: 56px;
+  }
+
+  .descripcion-content h2 {
+    font-size: 32px;
+  }
+
+  /* Nosotros */
+  .nosotros-imagenes-centrales {
+    max-width: 70%;
+  }
+
+  .nosotros-content {
+    gap: 120px;
+  }
+
+  /* Experiencias */
+  .experiencia-info h3 {
+    font-size: 32px;
+  }
+
+  /* Reconocimientos */
+  .reconocimiento-content {
+    max-width: 90%;
     flex-direction: column;
-    gap: 10px;
+    gap: 4%;
+  }
+
+  .reconocimiento-imagenes {
+    justify-content: center;
+  }
+
+  .reconocimiento-texto {
+    text-align: center;
+  }
+
+  /* Testimonios */
+  .testimonios-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonio-card {
+    max-width: 70%;
+  }
+}
+
+/* Tablet Vertical (768px - 1024px) */
+@media (max-width: 768px) {
+  /* Header - Activar menú hamburguesa */
+  .menu-icon {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--color-negro);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.3s ease-in-out;
+    margin-right: 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  #menu-toggle:checked ~ nav {
+    right: 0;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 10% 5%;
   }
 
   .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+
+  /* Secciones */
+  section {
+    padding: 8% 5%;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  /* Productos */
+  .productos-section {
+    padding: 8% 0 0 0;
+  }
+
+  .producto-card {
+    flex-direction: column;
+    height: auto;
+    padding: 8%;
+    gap: 5%;
+  }
+
+  .producto-card.rojo,
+  .producto-card.negro,
+  .producto-card.verde {
+    background-position: center;
+  }
+
+  .producto-info h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .producto-info p {
+    text-align: center;
+  }
+
+  .producto-imagen {
+    justify-content: center;
+  }
+
+  .producto-imagen img {
+    max-width: 280px;
+  }
+
+  .product-card-button {
+    display: block;
+    text-align: center;
+    margin: 3% auto 0;
+  }
+
+  /* Detalle Producto */
+  .detalle-hero {
+    flex-direction: column;
+    padding: 15% 5%;
+    min-height: auto;
+  }
+
+  .detalle-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .detalle-info h1 {
     font-size: 40px;
   }
 
-  .content-block,
-  .content-block.reverse,
-  .producto-card,
-  .detalle-hero,
-  .descripcion-section,
-  .experiencia-card,
-  .experiencia-card.reverse {
+  .detalle-specs {
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .spec-item {
+    margin-bottom: 20px;
+  }
+
+  /* Descripción */
+  .descripcion-section {
     flex-direction: column;
+    padding: 8% 5%;
+  }
+
+  .producto-imagen-grande {
+    text-align: center;
+  }
+
+  .producto-imagen-grande img {
+    max-width: 300px;
+  }
+
+  .descripcion-content h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .descripcion-content h4 {
+    font-size: 18px;
+  }
+
+  .detail-cta-button {
+    padding: 12px 60px;
+    font-size: 16px;
+  }
+
+  /* Proceso */
+  .proceso-section {
+    padding: 8% 5%;
   }
 
   .proceso-grid {
     flex-direction: column;
+    gap: 40px;
   }
 
-  .testimonios-grid {
+  .proceso-item {
+    gap: 15px;
+  }
+
+  .proceso-item:nth-child(2) {
     flex-direction: column;
   }
 
-  .testimonio-card {
-    max-width: 100%;
+  /* Nosotros */
+  .nosotros-section {
+    padding: 8% 5% 15% 5%;
   }
 
+  .nosotros-intro {
+    max-width: 95%;
+  }
+
+  .nosotros-imagenes-centrales {
+    max-width: 90%;
+    gap: 5%;
+  }
+
+  .nosotros-content {
+    gap: 80px;
+  }
+
+  .content-block {
+    flex-direction: column;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .block-overlap-left,
+  .block-overlap-right {
+    justify-content: center;
+  }
+
+  .text-container {
+    width: 100%;
+    padding: 8%;
+  }
+
+  .block-overlap-left .image-container,
+  .block-overlap-right .image-container {
+    position: static;
+    width: 100%;
+    margin-top: -20px;
+  }
+
+  .block-overlap-left {
+    flex-direction: column-reverse;
+  }
+
+  /* Experiencias */
+  .experiencias-section {
+    padding: 8% 5% 5%;
+  }
+
+  .experiencia-card,
+  .experiencia-card.reverse {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15%;
+  }
+
+  .experiencia-imagen {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .experiencia-imagen img {
+    width: 80%;
+    height: 400px;
+    border-radius: 200px 200px 0 0;
+  }
+
+  .experiencia-info {
+    flex: 0 0 100%;
+    width: 90%;
+    margin-top: -10%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    align-items: center !important;
+  }
+
+  .experiencia-info h3 {
+    text-align: center !important;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  /* Reservas */
+  .reservas-section {
+    padding: 8% 5% 6%;
+  }
+
+  .reservas-section h2 {
+    font-size: 32px;
+  }
+
+  .reservas-intro {
+    max-width: 90%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  /* Contacto */
+  .contacto-section {
+    padding: 8% 5%;
+  }
+
+  .contacto-section h2 {
+    font-size: 32px;
+  }
+
+  .contacto-intro {
+    max-width: 90%;
+  }
+
+  .mapa-container {
+    width: 100%;
+  }
+
+  /* Testimonios */
+  .testimonio-card {
+    max-width: 90%;
+  }
+
+  /* Footer */
   .footer-content {
     flex-direction: column;
     gap: 30px;
@@ -1122,28 +1537,136 @@ footer {
     gap: 15px;
     align-items: center;
   }
+}
 
-  .form-row {
-    flex-direction: column;
+/* Móvil Grande (480px - 768px) */
+@media (max-width: 480px) {
+  /* Header */
+  header {
+    padding: 3% 5%;
   }
 
-  /* Responsive for Detalle Hero */
+  .logo img {
+    height: 35px;
+  }
+
+  nav {
+    width: 80%;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  /* Productos */
+  .producto-info h3 {
+    font-size: 24px;
+  }
+
+  .producto-info p {
+    font-size: 14px;
+  }
+
+  .producto-imagen img {
+    max-width: 220px;
+  }
+
+  /* Detalle */
   .detalle-info h1 {
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 32px;
   }
 
-  .detalle-specs {
-    align-items: center;
+  .descripcion-content h2 {
+    font-size: 24px;
+  }
+
+  .descripcion-content p,
+  .descripcion-content h4 {
+    font-size: 14px;
+  }
+
+  .detail-cta-button {
+    padding: 10px 40px;
+    font-size: 14px;
+  }
+
+  /* Experiencias */
+  .experiencia-info h3 {
+    font-size: 24px;
+  }
+
+  .experiencia-imagen img {
+    height: 300px;
+    border-radius: 150px 150px 0 0;
+  }
+
+  /* Nosotros */
+  .nosotros-imagenes-centrales {
+    flex-direction: column;
+    max-width: 70%;
+  }
+
+  .nosotros-imagenes-centrales img {
     width: 100%;
-    margin-top: 30px;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
   }
 
-  .spec-item {
-    margin-bottom: 20px;
+  /* Formularios */
+  .form-reservas input,
+  .form-reservas select,
+  .form-reservas textarea {
+    font-size: 14px;
+    padding: 15px 18px;
+  }
+
+  .submit-button {
+    padding: 12px 40px;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer-logo img {
+    height: 50px;
+  }
+
+  .red-social {
+    width: 45px;
+    height: 45px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+}
+
+/* Móvil Pequeño (hasta 480px) */
+@media (max-width: 375px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .producto-info h3 {
+    font-size: 20px;
+  }
+
+  .detalle-info h1 {
+    font-size: 28px;
+  }
+
+  .experiencia-info h3 {
+    font-size: 20px;
+  }
+
+  .producto-imagen img {
+    max-width: 180px;
   }
 }
